@@ -1,4 +1,4 @@
 site_name: pyturkey
-site_url: https://pyturkey.github.io
+site_url: https://pyturkey.github.io/
 theme:
   name: material
