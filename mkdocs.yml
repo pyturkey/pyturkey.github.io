@@ -2,3 +2,67 @@ site_name: pyturkey
 site_url: https://pyturkey.github.io/
 theme:
   name: material
+  features:
+    - content.code.copy
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Dark
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Light
+      primary: yellow
+      accent: yellow
+
+# Repository
+repo_name: pyturkey.github.io
+repo_url: https://github.com/pyturkey.github.io
+
+extra:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/pyturkey
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/adnan-kayace
+
+plugins:
+  - search
+  - blog
+  - tags:
+      tags_file: tags.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - index.md
+  - Blog:
+    - blog/index.md
